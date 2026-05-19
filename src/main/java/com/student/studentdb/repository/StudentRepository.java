@@ -1,0 +1,8 @@
+package com.student.studentdb.repository;
+
+import com.student.studentdb.model.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudentRepository extends JpaRepository<Student, Long> {
+
+}
