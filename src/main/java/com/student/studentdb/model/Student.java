@@ -16,7 +16,7 @@ public class Student {
 
     private String lastName;
 
-    private String el;
+    private String email;
 
     private String course;
 
