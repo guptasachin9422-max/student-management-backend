@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/students")
 @CrossOrigin("*")
@@ -19,7 +21,7 @@ public class StudentController {
 
     // CREATE
     @PostMapping
-    public Student createStudent(@RequestBody Student student) {
+    public Student createStudent(@Valid @RequestBody Student student) {
         return service.saveStudent(student);
     }
 
@@ -39,7 +41,7 @@ public class StudentController {
     @PutMapping("/{id}")
     public Student updateStudent(
             @PathVariable Long id,
-            @RequestBody Student student) {
+            @valid @RequestBody Student student) {
 
         return service.updateStudent(id, student);
     }
