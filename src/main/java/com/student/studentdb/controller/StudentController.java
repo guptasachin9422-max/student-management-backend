@@ -52,4 +52,12 @@ public class StudentController {
 
         return "Student deleted successfully";
     }
+    @GetMapping("/search/id/{id}")
+    public Optional<Student> searchById(@PathVariable Long id) {
+        return service.getStudentById(id);
+    }
+    @GetMapping("/search/name/{name}")
+    public List<Student> searchByName(@PathVariable String name) {
+        return service.searchByName(name);
+    }
 }

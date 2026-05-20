@@ -48,5 +48,9 @@ public class StudentService {
     // DELETE
     public void deleteStudent(Long id) {
         repository.deleteById(id);
+
+    }
+    public List<Student> searchByName(String name) {
+        return repository.findByFirstNameContainingIgnoreCase(name);
     }
 }
