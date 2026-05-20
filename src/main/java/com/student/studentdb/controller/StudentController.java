@@ -41,7 +41,7 @@ public class StudentController {
     @PutMapping("/{id}")
     public Student updateStudent(
             @PathVariable Long id,
-            @valid @RequestBody Student student) {
+            @Valid @RequestBody Student student) {
 
         return service.updateStudent(id, student);
     }
