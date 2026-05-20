@@ -39,7 +39,7 @@ public class StudentService {
         student.setLastName(updatedStudent.getLastName());
         student.setEmail(updatedStudent.getEmail());
         student.setCourse(updatedStudent.getCourse());
-        student.setPhone(updatedStudent.getPhone());
+        student.setPhoneNumber(updatedStudent.getPhoneNumber());
         student.setAddress(updatedStudent.getAddress());
 
         return repository.save(student);
