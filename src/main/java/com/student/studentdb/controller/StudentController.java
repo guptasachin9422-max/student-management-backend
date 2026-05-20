@@ -22,7 +22,7 @@ public class StudentController {
     // CREATE
     @PostMapping
     public Student createStudent(@Valid @RequestBody Student student) {
-        return service.saveStudent(student);
+     return service.saveStudent(student);
     }
 
     // READ ALL
